@@ -1,0 +1,223 @@
+@import "general.css";
+@import "blog-post.css";
+.wrapper{
+    display: grid;
+    grid-gap: 20px;
+    /* width: 90vw; */
+    grid-template-columns: auto;
+    grid-template-rows: 40px auto 50px;
+    grid-template-areas:
+    "hd hd hd hd hd hd hd hd"
+    "main main main main main main main main"
+    "ft ft ft ft ft ft ft ft";
+
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.header{
+    grid-area: hd;
+    color: #fff;
+    text-align: center;
+}
+.blog-list{
+    grid-area: main;
+    margin: 50px auto;
+}
+.footer{
+    grid-area: ft;
+    background-color: #585863;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 35px;
+}
+.logo {
+    height: 100%;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+}
+.logo h1 {
+    padding: 0;
+    background: #112244;
+    color: #f1f3f5;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 13px;
+    font-weight: bold;
+    margin-bottom: 0;
+    font-size: calc(22px + (33 - 22) * ((100vw - 1024px) / (1920 - 1024)));
+}
+.wrapper .navigation-desktop {
+    background-color: #39394d;
+    width: 100%;
+}
+.wrapper .navigation-desktop nav {
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.wrapper .navigation-desktop nav a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+    display: block;
+    transition: all 0.5s ease-in-out;
+}
+.wrapper .navigation-desktop nav a:hover {
+    background: #f00;
+    color: #c8d4ea;
+}
+
+.wrapper .navigation-desktop nav ul {
+    list-style: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+.wrapper .navigation-desktop nav ul li {
+    float: left;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+}
+  /* blog list */
+.blog-list .blog-date{
+    display: block;
+}
+.blog-list .blog-content{
+    padding: 10px;
+}
+.blog-list .blog-item p{
+  overflow: hidden;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 300px;
+}
+.blog-list .blog-item a{
+    color: #02b3e4 ;
+    text-decoration: none;
+}
+
+
+.blog-wrapper{
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "hd hd hd"
+    "main main main";
+    grid-gap: 25px;
+
+}
+.menu-icon,
+.check-box,
+.naviagtion-mobile {
+  display: none;
+}
+.list-container{
+    padding: 0 30px;
+    margin-bottom: 30px;
+}
+/* Start Section Media Query */
+@media (max-width: 1366px){
+    .container{
+        max-width: 1000px;
+    }
+}
+@media (max-width: 1200px){
+    .blog-wrapper{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "hd hd"
+        "main main";
+
+    }
+    .container{
+        max-width: 840px;
+    }
+}
+@media (max-width: 1000px){
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 13px;
+        left: 10px;
+        color: #f0f6f4;
+        padding: 3px;
+        font-size: 25px;
+        cursor: pointer;
+      }
+      .item label,
+  .item .last-item {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #e07a7a;
+    color: #112255;
+    cursor: pointer;
+    padding: 8px;
+    transition: all 0.3s ease-in-out;
+    border-bottom: 1.5px solid #eee;
+    font-size: calc(13px + (18 - 13) * ((100vw - 320px) / (1024 - 320)));
+  }
+  .item label:hover,
+  .item .last-item:hover {
+    background: #645b6d;
+    color: #f0f2f4;
+  }
+  .item > input {
+    display: none;
+  }
+}
+@media(max-width: 768px){
+    .container{
+        max-width: 680px;
+    }
+}
+@media (max-width: 767px){
+    .blog-wrapper{
+        grid-template-columns: 1fr;
+        grid-template-areas: "hd"
+        "main";
+
+    }
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: -2px;
+        left: 10px;
+        color: #f0f6f4;
+        padding: 3px;
+        font-size: 25px;
+        cursor: pointer;
+      }
+      .check-box:checked ~ .naviagtion-mobile {
+        display: block;
+      }
+      .navigation-desktop{
+        display: none;
+      }
+      .blog-list .section-title h1{
+          margin-top: 15px;
+      }
+      .container{
+        max-width: unset;
+    }
+}
+
+
+
+

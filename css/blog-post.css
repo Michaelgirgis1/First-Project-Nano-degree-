@@ -1,0 +1,35 @@
+.blog-post-wrapper{
+  padding: 40px 0;
+}
+
+.blog-post-wrapper .content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "content content content  sideBar";
+    grid-gap: 30px
+}
+.blog-post-wrapper .content-wrapper .content{
+  grid-area: content;
+}
+
+.blog-post-wrapper .content-wrapper .side-bar{
+    grid-area: sideBar;
+  }
+  .blog-post-wrapper .content-wrapper .content > span:first-of-type{
+      display: block;
+  }
+  .blog-post-wrapper .content-wrapper span span{
+      color: #02b3e4;
+  }
+  .side-bar .about {
+      padding: 20px;
+      background-color: #efeded;
+  }
+.archives-link{
+      display: block;
+      color: #02b3e4;
+      text-decoration: none;
+
+  }
+
+
