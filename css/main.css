@@ -1,5 +1,6 @@
 @import "general.css";
 @import "blog-post.css";
+@import "card.css";
 .wrapper{
     display: grid;
     grid-gap: 20px;
@@ -93,23 +94,6 @@
     line-height: 40px;
 }
   /* blog list */
-.blog-list .blog-date{
-    display: block;
-}
-.blog-list .blog-content{
-    padding: 10px;
-}
-.blog-list .blog-item p{
-  overflow: hidden;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 300px;
-}
-.blog-list .blog-item a{
-    color: #02b3e4 ;
-    text-decoration: none;
-}
 
 
 .blog-wrapper{
@@ -130,6 +114,11 @@
 .list-container{
     padding: 0 30px;
     margin-bottom: 30px;
+}
+
+.button-continue{
+    border: unset;
+    background: unset;
 }
 /* Start Section Media Query */
 @media (max-width: 1366px){

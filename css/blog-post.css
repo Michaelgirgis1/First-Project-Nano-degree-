@@ -31,5 +31,14 @@
       text-decoration: none;
 
   }
+.blog-post-wrapper blockquote{  
+  background: #e8e5e5;
+  padding: 20px;
+  border-left: 2px solid #f00;
 
-
+}
+.blog-post-wrapper p i,
+.blog-post-wrapper p u,
+.blog-post-wrapper p strong{
+  font-size: 22px;
+}

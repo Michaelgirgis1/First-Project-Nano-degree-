@@ -1,0 +1,17 @@
+.blog-list .blog-date{
+    display: block;
+}
+.blog-list .blog-content{
+    padding: 10px;
+}
+.blog-list .card p{
+  overflow: hidden;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 300px;
+}
+.blog-list .card a{
+    color: #02b3e4 ;
+    text-decoration: none;
+}
